@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-function AddTweet(props){
+function AddTweet({updateTodo}){
 
     let [text,setText] = useState("");
 
@@ -14,7 +14,7 @@ function AddTweet(props){
 
             <button 
             onClick={() => {
-                props.updateTodo(text);
+                updateTodo(text);
                 setText("");
             }}>
                 Tweet !!
