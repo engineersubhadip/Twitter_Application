@@ -1,6 +1,15 @@
-function Tweet(){
+import '../CSS/Tweet.css'
+
+function Tweet({content,likeCount}){
     return(
-        <div>This is the Tweet Component</div>
+        <div className="tweet-wrapper">
+            <div className="tweet-content">
+                {content}
+            </div>
+            <div className="likes">
+                {likeCount} Likes
+            </div>
+        </div>
     )
 }
 
