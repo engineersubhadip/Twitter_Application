@@ -2,8 +2,7 @@ import '../CSS/Tweet.css';
 import {useState} from 'react';
 
 function Tweet({id,content,likeCount,createdAt,handleUpdateTweet}){
-    console.log(content);
-    console.log(handleUpdateTweet)
+
     // * Edit Functionality to Tweet:-
 
     let [isEditing,setIsEditing] = useState(false)

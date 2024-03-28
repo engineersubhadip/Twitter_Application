@@ -2,7 +2,7 @@ import Tweet from "./Tweet";
 import '../CSS/TweetList.css'
 
 function TweetList({tweets,updateTheTweet}){
-    console.log(tweets,updateTheTweet)
+
     return(
         <ul className="tweet-list">
             {
