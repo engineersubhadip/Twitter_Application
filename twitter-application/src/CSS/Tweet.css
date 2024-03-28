@@ -11,6 +11,11 @@
     margin-bottom: 1rem;
 }
 
-.likes{
+.like-createdAt-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.likes, .created-at{
     font-size: xx-small;
 }

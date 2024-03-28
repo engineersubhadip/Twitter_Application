@@ -1,13 +1,20 @@
 import '../CSS/Tweet.css'
 
-function Tweet({content,likeCount}){
+function Tweet({content,likeCount,createdAt}){
+    console.log("Inside Tweet",content,likeCount,createdAt)
+    console.log(typeof createdAt);
     return(
         <div className="tweet-wrapper">
             <div className="tweet-content">
                 {content}
             </div>
-            <div className="likes">
-                {likeCount} Likes
+            <div className='like-createdAt-wrapper'>
+                <div className="likes">
+                    {likeCount} Likes
+                </div>
+                <div className='created-at'>
+                    <b>Tweet Created At : {createdAt}</b>
+                </div>
             </div>
         </div>
     )

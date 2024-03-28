@@ -14,9 +14,11 @@ function Twitter(){
     
     return (
         <div>
+
             <AddTweet 
             updateTodo=
-            {(newTodo) => setDummyTweets([...dummyTweets,{id:new Date().getTime(), content:newTodo,like:234}])}/>
+            {(newTodo) => setDummyTweets([...dummyTweets,{id:new Date().getTime(), content:newTodo,like:234,createdAt: new Date()}])}/>
+            
             <TweetList tweets={dummyTweets}/>
         </div>
     )

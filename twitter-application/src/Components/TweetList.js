@@ -8,7 +8,7 @@ function TweetList({tweets}){
             {
                 tweets.map(function(res){
                     return <li key={res.id}>
-                        <Tweet content={res.content} likeCount={res.like}/>
+                        <Tweet content={res.content} likeCount={res.like} createdAt={res.createdAt.toString()}/>
                         </li>
                 })
             }
