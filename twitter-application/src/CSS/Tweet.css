@@ -7,6 +7,11 @@
     font-size: larger;
 }
 
+.tweet-edit-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
 .tweet-content{
     margin-bottom: 1rem;
 }

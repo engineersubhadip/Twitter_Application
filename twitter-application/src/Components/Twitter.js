@@ -11,6 +11,16 @@ function Twitter(){
         // {id:26,content:"Tweet Number 4", like:131},
         // {id:29,content:"Tweet Number 5", like:78}
       ])
+
+    function handleEditTweet(updatedTweet){
+        let updatedList = dummyTweets.map(function(ele){
+            if(ele.id === updatedTweet.id){
+                ele.content = updatedTweet.content
+            }
+            return ele;
+        });
+        setDummyTweets(updatedList);
+    }
     
     return (
         <div>
@@ -19,7 +29,7 @@ function Twitter(){
             updateTodo=
             {(newTodo) => setDummyTweets([...dummyTweets,{id:new Date().getTime(), content:newTodo,like:234,createdAt: new Date()}])}/>
             
-            <TweetList tweets={dummyTweets}/>
+            <TweetList tweets={dummyTweets} updateTheTweet={(newUpdatedTweet) => handleEditTweet(newUpdatedTweet)}/>
         </div>
     )
 }
