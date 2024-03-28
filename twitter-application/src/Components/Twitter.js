@@ -12,7 +12,7 @@ function Twitter(){
         // {id:29,content:"Tweet Number 5", like:78}
       ])
 
-    let [isDecreasing,setIsDecreasing] = useState(false);
+    // let [isDecreasing,setIsDecreasing] = useState(false);
 
     function handleEditTweet(updatedTweet){
         let updatedList = dummyTweets.map(function(ele){
@@ -28,12 +28,9 @@ function Twitter(){
         
         let currentTweets = [...dummyTweets];
 
-        if(isDecreasing){
-            currentTweets.sort((t1,t2) => t2.createdAt.getTime() - t1.createdAt.getTime());
-        }else{
-            currentTweets.sort((t1,t2) => t1.createdAt.getTime() - t2.createdAt.getTime());
-        }
-
+        
+        currentTweets.sort((t1,t2) => t2.createdAt.getTime() - t1.createdAt.getTime());
+        
         setDummyTweets(currentTweets);
 
     }
@@ -47,10 +44,9 @@ function Twitter(){
 
             <button 
                 onClick={() => {
-                                setIsDecreasing(!isDecreasing);
                                 sortedTweets();
                                 }}>
-                    {(isDecreasing) ? "Sort by Increasing order of Creation date" : "Sort by Decreasing order of Creation date"}
+                    Sort by Decreasing order of Creation Date
             </button>
             
             <TweetList tweets={dummyTweets} updateTheTweet={(newUpdatedTweet) => handleEditTweet(newUpdatedTweet)}/>
