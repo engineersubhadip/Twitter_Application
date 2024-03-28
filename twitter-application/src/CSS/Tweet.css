@@ -5,16 +5,21 @@
     margin-bottom: 1rem;
     width: 650px;
     font-size: larger;
+    /* margin-left:10px; */
+    /* display: flex; */
+    /* justify-content: center; */
 }
 
 .tweet-edit-wrapper{
     display: flex;
+    /* flex-direction: column; */
     justify-content: space-between;
 }
 
 .tweet-content{
     margin-bottom: 1rem;
 }
+
 
 .like-createdAt-wrapper{
     display: flex;

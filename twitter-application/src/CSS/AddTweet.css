@@ -1,0 +1,12 @@
+.tweet-input-box{
+    flex-basis: 40%;
+    height:100%;
+    /* border: 10px solid black; */
+}
+
+.tweet-button{
+    border-radius: 50px;
+    /* padding:1rem */
+    background-color: skyblue;
+    height: 100%;
+}

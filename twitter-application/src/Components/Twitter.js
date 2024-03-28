@@ -1,4 +1,5 @@
 import { useState } from "react";
+import '../CSS/Twitter.css';
 import AddTweet from "./AddTweet";
 import TweetList from "./TweetList";
 
@@ -36,18 +37,20 @@ function Twitter(){
     }
     
     return (
-        <div>
+        <div >
 
-            <AddTweet 
-            updateTodo=
-            {(newTodo) => setDummyTweets([...dummyTweets,{id:new Date().getTime(), content:newTodo,like:234,createdAt: new Date()}])}/>
+            <div className="twitter-wrapper">
+                <AddTweet 
+                updateTodo=
+                {(newTodo) => setDummyTweets([...dummyTweets,{id:new Date().getTime(), content:newTodo,like:234,createdAt: new Date()}])}/>
 
-            <button 
-                onClick={() => {
-                                sortedTweets();
-                                }}>
-                    Sort by Decreasing order of Creation Date
-            </button>
+                <button 
+                    onClick={() => {
+                                    sortedTweets();
+                                    }}>
+                        Sort by Decreasing order of Creation Date
+                </button>
+            </div>
             
             <TweetList tweets={dummyTweets} updateTheTweet={(newUpdatedTweet) => handleEditTweet(newUpdatedTweet)}/>
         </div>

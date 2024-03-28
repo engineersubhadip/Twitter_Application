@@ -1,0 +1,8 @@
+.twitter-wrapper{
+    display: flex;
+    justify-content: space-around;
+    /* border: 2px solid black; */
+    
+    padding: 1rem;
+    height: 2rem;;
+}
