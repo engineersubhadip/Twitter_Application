@@ -13,8 +13,6 @@ function Twitter(){
         // {id:29,content:"Tweet Number 5", like:78}
       ])
 
-    // let [isDecreasing,setIsDecreasing] = useState(false);
-
     function handleEditTweet(updatedTweet){
         let updatedList = dummyTweets.map(function(ele){
             if(ele.id === updatedTweet.id){
